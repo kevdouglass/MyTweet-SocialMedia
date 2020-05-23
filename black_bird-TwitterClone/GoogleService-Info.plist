@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>467113968246-f8o9fhp2gupthpcr1k9v5l9mlvdpvjtq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.467113968246-f8o9fhp2gupthpcr1k9v5l9mlvdpvjtq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDRmYzyZxgO0r53tke0fBppu2mRL_6I3AM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>467113968246</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kevindouglass.black-bird-TwitterClone</string>
+	<key>PROJECT_ID</key>
+	<string>kdtweet-ffda8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kdtweet-ffda8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:467113968246:ios:95a7b6110978695a871557</string>
+	<key>DATABASE_URL</key>
+	<string>https://kdtweet-ffda8.firebaseio.com</string>
+</dict>
+</plist>
