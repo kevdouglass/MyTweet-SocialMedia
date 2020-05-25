@@ -41,7 +41,9 @@ class LoginViewController: UIViewController {
             
             // if there is no errors
             if(error == nil) {
-                self.rootRef.child("user_profile").child(user!.user.uid).child("handle").observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
+                // make the user get a handle
+                self.rootRef.child("user_profiles").child(user!.user.uid).child("handle").observeSingleEvent(of: .value) {
+                    (snapshot: DataSnapshot) in
                     
                     if(snapshot.exists() == false) {
                         // user does not have a handle, so...

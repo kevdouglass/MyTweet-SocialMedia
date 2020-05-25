@@ -40,49 +40,38 @@ class HandleViewController: UIViewController {
     
     @IBAction func didTapStartTweeting(_ sender: Any) {
         // ensure twitter handle NOT-IN-USE
-     
-        /*let handle = self.rootRef.child("Handles").child(self.handle.text!).observe(.value) { (snapshot: DataSnapshot) in
-            //
-            print(snapshot)
-            // check if snapshot exists (@handle)
-            if(!snapshot.exists())
-            {
-                // update the handle in the user_profiles and in the Handles mode
-              //  self.rootRef.child("user_profiles").child(user.uid).child("handle").setValue(handle.text!.lowercased())
-                
-                //).child("handle").setValue(self.handle.text!.lowercased())
-            }
-        }*/
-        
         let uid = Auth.auth().currentUser?.uid
         /*
         //let handle: Void =
  */
-        rootRef.child("Handles").child(self.handle.text!).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
-            
+       // let handle = self.rootRef.child("Handles").child(self.handle.text!).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
+       
+        let handle = self.rootRef.child("Handles").child(self.handle.text!).observeSingleEvent(of: .value) {
+            (snapshot: DataSnapshot) in
+        
             // check if the Handle node exists for the current user
             if(!snapshot.exists()){
-                
+
                 // update the handle in user_profiles and in the handles node
-                
-                self.rootRef.child("user_profiles").child(uid!).child("handle").setValue(self.handle.text!) // could make sure its lowercase by adding the .lowercaseString to end of function call
-                
+                self.rootRef.child("user_profiles").child(uid!).child("handle").setValue(self.handle.text!)
+                // could make sure its lowercase by adding the .lowercaseString to end of functi
                 // update the NAME of user to FULL NAME of the user
                 self.rootRef.child("user_profiles").child(uid!).child("name").setValue(self.fullName.text!)
-                
+
                 // update the handle in the handle Node
                 self.rootRef.child("Handles").child(self.handle.text!).setValue(uid)
-                
+
                 // send the user to the Home Screen
                 // by segue
                 self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
-                
+
             }
             else {
                 // otherwise .. the snapshot already exists
                 self.errorMessage.text = "Handle already in use!"
-                
+
             }
+  
         }
     }
     
