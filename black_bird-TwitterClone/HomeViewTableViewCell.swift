@@ -30,7 +30,7 @@ public class HomeViewTableViewCell: UITableViewCell {
         // Initialization code
     }
 
- 
+    
     /**
      Configure a user
      */
